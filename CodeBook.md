@@ -1,7 +1,20 @@
-### CodeBook
-_This file describes the variables of the tidy data and how it was make from the raw data_
+CodeBook
+========
 
-The raw data consist from 561 variables for each of 30 subjects and for each of 6 types of activity. The raw data is described in _features_info_ file of UCI HAR Dataset.
+### The Raw Data Source
+This dataset is derived from the "Human Activity Recognition Using Smartphones Data Set": 
+The full description of raw data is here:
+[http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones] (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
-First we select features which is the measurements on the mean and standard deviation. The tidy data is average variables of selected features grouped by subjects and activity. 
+The raw data is available from here:
+[https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip] (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
+First, I merged the training and the test sets of data. The merged data consist of three files:
+
+* X - 561 measures from the raw data (X_train and X_test)
+
+* Y - train and test labels, indicating activity type
+
+* subject - subjects corresponding to X.
+
+I selected 79 of 561 measures, which correspond to mean and standard deviation values. The resulting tidy data file is an averages of 79 measures for each subject and each activity type. 
